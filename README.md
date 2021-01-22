@@ -24,7 +24,7 @@
 	<dependency>
 	    <groupId>com.github.jkanTech</groupId>
 	    <artifactId>goma</artifactId>
-	    <version>1.0.1</version>
+	    <version>1.0.2</version>
 	</dependency>
 
 
@@ -40,7 +40,7 @@
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.1'
+	        implementation 'com.github.jkantech:goma:1.0.2'
 		}
 ```
 
@@ -55,7 +55,7 @@
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.1'
+	        implementation 'com.github.jkantech:goma:1.0.2'
 		}
  ```
  ### Manifests
