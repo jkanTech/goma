@@ -1,10 +1,13 @@
-# Android kotlin Goma http client Library
+# Android Kotlin Goma http protocol client Library
 
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## Download and Import
 
+### Supported methods
+
+GET,POST,PUT,DELETE
 
 ### Android Studio/Gradle
 
@@ -40,7 +43,7 @@
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.1'
+	        implementation 'com.github.jkantech:goma:1.0.2'
 		}
 ```
 
@@ -55,7 +58,7 @@
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.1'
+	        implementation 'com.github.jkantech:goma:1.0.2'
 		}
  ```
  ### Manifests
@@ -69,12 +72,14 @@
 
 ```
 
+
+
 ### Sample Kotlin Usage 
 #### GET Method
 
 ```Kotlin
  private fun getuser(){
-//Base URL
+// initialize Goma Library + BaseURL
   Goma.init(this,"http://192.168.8.101/api/v1/")
 
         
@@ -133,9 +138,8 @@ private fun add(){
 
 ```kotlin
 private fun add(){
+
 // initialize Goma Library 
-
-
   Goma.init(this)
 
  val data: HashMap<String, String> = HashMap()
