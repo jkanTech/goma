@@ -182,7 +182,7 @@ val parameters:HashMap<String, String> = HashMap()
     
           override fun onSuccess(response: String?) {
 
-                Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Successfully deleted", Toast.LENGTH_SHORT).show()
             }
            override fun onError(error: String?) {
                 Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
