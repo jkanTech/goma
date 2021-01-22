@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GomaExample.iml" filepath="$PROJECT_DIR$/.idea/modules/GomaExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Goma/GomaExample.Goma.iml" filepath="$PROJECT_DIR$/.idea/modules/Goma/GomaExample.Goma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GomaExample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GomaExample.app.iml" />
+    </modules>
+  </component>
+</project>
