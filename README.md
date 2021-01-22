@@ -140,7 +140,7 @@ private fun add(){
 
  val data: HashMap<String, String> = HashMap()
         data["Appkey"] = "12345"
-        data["name"] = "Canelle"
+        data["name"] = "Bob"
         data["title"] = "Infor"
         data["age"] = "30"
 
@@ -195,7 +195,7 @@ private fun add(){
 
 <h2 id="examples">Examples :eyes:</h2>
 
-Download the [Crud Example App]() or look at the [source code](https://github.com/jkanTech/goma/tree/master/CrudExample).
+Download the [Goma Example App]() or look at the [source code](https://github.com/jkanTech/goma/tree/master/CrudExample).
 
 
 <br/>
