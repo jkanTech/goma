@@ -77,58 +77,57 @@ GET, POST, PUT, DELETE
 #### GET Method
 
 ```Kotlin
- private fun getuser(){
-// initialize Goma Library + BaseURL
-  Goma.init(this,"http://192.168.8.101/api/v1/")
-
-        
-        Goma.get("users",object :OnResponseListener{
-           //on response
-            override fun onSuccess(response: String?) {
-
-        Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
-
-
-            }
-
+ private fun getUsers(){
+ // initialize Goma Library + baseURL
+ Goma.init(this,"http://192.168.8.101/api/v1/")
+ 
+         
+ //GET Method ,path
+   Goma.get("users", object : OnResponseListener {
+     
+           override fun onSuccess(response: String?) {
+             
+                   users=users.deserializer(response)
+ 
+                 Toast.makeText(requireContext(), response.toString(), Toast.LENGTH_SHORT).show()
+             }
             override fun onError(error: String?) {
-        Toast.makeText(this, error.toString(), Toast.LENGTH_SHORT).show()
-
-            }
-
-          
-
-        })
-    }
+                 Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
+             }
+ 
+         })
+ 
+ 
+ }
 
 ```
 #### POST Method
 
 ```kotlin
-private fun add(){
-// initialize Goma Library + BaseURL
-  Goma.init(this,"http://192.168.8.101/api/v1/")
+private fun addUser(){
+// initialize Goma Library + baseURL
+Goma.init(this,"http://192.168.8.101/api/v1/")
 
- val data: HashMap<String, String> = HashMap()
-        data["Appkey"] = "12345"
-        data["name"] = "Canelle"
-        data["title"] = "Infor"
-        data["age"] = "30"
+val parameters:HashMap<String, String> = HashMap()
+        parameters.put("appKey","12345#")
+        parameters.put("name","Jonas")
+        parameters.put("title","Inform")
+        parameters.put("age","18")
 
-        Goma.post("adduser", data,object :OnResponseListener {
-            override fun onSuccess(response: String?) {
-        Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
+//POST Method ,path
+  Goma.post("add",parameters, object : OnResponseListener {
+    
+          override fun onSuccess(response: String?) {
 
+                Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_SHORT).show()
             }
-
-            override fun onError(error: String?) {
-
-        Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
-
+           override fun onError(error: String?) {
+                Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
             }
-
 
         })
+
+
 }
     
 
@@ -141,14 +140,14 @@ private fun add(){
 // initialize Goma Library 
   Goma.init(this)
 
- val data: HashMap<String, String> = HashMap()
-        data["Appkey"] = "12345"
-        data["name"] = "Bob"
-        data["title"] = "Infor"
-        data["age"] = "30"
+ val parameters: HashMap<String, String> = HashMap()
+        parameters["Appkey"] = "12345"
+        parameters["name"] = "Bob"
+        parameters["title"] = "Infor"
+        parameters["age"] = "30"
 
 
-        Goma.put("http://192.168.8.101/api/v1/adduser", data,object :OnResponseListener {
+        Goma.put("http://192.168.8.101/api/v1/adduser", parameters,object :OnResponseListener {
             override fun onSuccess(response: String?) {
         Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
 
@@ -169,28 +168,29 @@ private fun add(){
 #### DELETE Method
 
 ```kotlin
-private fun add(){
+private fun delUser(){
+// initialize Goma Library
+Goma.init(this)
 
-  Goma.init(this,"http://192.168.8.101/api/v1/")
- val data: HashMap<String, String> = HashMap()
-        data["Appkey"] = "12345"
-        data["id"] = "4"
+val parameters:HashMap<String, String> = HashMap()
+        parameters.put("appKey","12345#")
+        parameters.put("id","4")
+
         
-        Goma.del("deluser", data,object :OnResponseListener {
-            override fun onSuccess(response: String?) {
-        Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
+//DELETE Method ,URL
+  Goma.del("http://192.168.43.128/api/delUser",parameters, object : OnResponseListener {
+    
+          override fun onSuccess(response: String?) {
 
+                Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_SHORT).show()
+            }
+           override fun onError(error: String?) {
+                Toast.makeText(requireContext(), error.toString(), Toast.LENGTH_SHORT).show()
             }
 
-            override fun onError(error: String?) {
-
-        Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show()
-
-            }
-
-
-     
         })
+
+
 }
 
 ```
