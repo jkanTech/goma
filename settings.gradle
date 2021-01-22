@@ -1,0 +1,3 @@
+rootProject.name = "GomaExample"
+include ':app'
+include ':Goma'
