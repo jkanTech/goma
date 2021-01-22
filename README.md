@@ -27,7 +27,7 @@ GET,POST,PUT,DELETE
 	<dependency>
 	    <groupId>com.github.jkanTech</groupId>
 	    <artifactId>goma</artifactId>
-	    <version>1.0.1</version>
+	    <version>1.0.2</version>
 	</dependency>
 
 
