@@ -1,4 +1,4 @@
-package com.github.jkantech.goma
+package com.github.jkantech.goma.internal
 
 
 import com.android.volley.Response

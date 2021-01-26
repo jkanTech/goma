@@ -5,6 +5,7 @@ import android.util.Log
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.github.jkantech.goma.internal.RequestFactory
 
 object Goma {
     private lateinit var appContext: Context
@@ -101,7 +102,7 @@ object Goma {
             parameters: HashMap<String, String>,
             listener: OnResponseListener?
     ) {
-        val req =RequestFactory.HttpRequest(
+        val req = RequestFactory.HttpRequest(
                 Request.Method.POST,
                 path,
                 parameters,
@@ -120,7 +121,7 @@ object Goma {
             parameters: HashMap<String, String>,
             listener: OnResponseListener?
     ) {
-        val req =RequestFactory.HttpRequest(
+        val req = RequestFactory.HttpRequest(
                 Request.Method.DELETE,
                 path,
                 parameters,
