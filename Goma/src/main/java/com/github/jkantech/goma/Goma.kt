@@ -34,7 +34,7 @@ object Goma {
 
         val req = StringRequest(
                 Request.Method.GET,
-                "$URL$path",
+                "$URL${checkPath(path)}",
                 { p1 -> listener?.onSuccess(p1) }) { p1 ->
             if (listener != null) {
                 listener.onError(p1.message)
