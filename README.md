@@ -26,7 +26,7 @@ GET, POST, PUT, DELETE
 	<dependency>
 	    <groupId>com.github.jkanTech</groupId>
 	    <artifactId>goma</artifactId>
-	    <version>1.0.2</version>
+	    <version>1.0.3</version>
 	</dependency>
 
 
@@ -42,7 +42,7 @@ GET, POST, PUT, DELETE
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.2'
+	        implementation 'com.github.jkantech:goma:1.0.3'
 		}
 ```
 
@@ -57,7 +57,7 @@ GET, POST, PUT, DELETE
     }
 	
     dependencies {
-	        implementation 'com.github.jkantech:goma:1.0.2'
+	        implementation 'com.github.jkantech:goma:1.0.3'
 		}
  ```
  ### Manifests
@@ -78,8 +78,8 @@ GET, POST, PUT, DELETE
 
 ```Kotlin
  private fun getUsers(){
- // initialize Goma Library + baseURL
- Goma.init(this,"http://192.168.8.101/api/v1/")
+ // initialize Goma Library
+ Goma.init(this,"http://192.168.8.101/api/v1")
  
          
  //GET Method ,path
@@ -106,7 +106,7 @@ GET, POST, PUT, DELETE
 ```kotlin
 private fun addUser(){
 // initialize Goma Library + baseURL
-Goma.init(this,"http://192.168.8.101/api/v1/")
+Goma.init(this)
 
 val parameters:HashMap<String, String> = HashMap()
         parameters.put("appKey","12345#")
@@ -115,7 +115,7 @@ val parameters:HashMap<String, String> = HashMap()
         parameters.put("age","18")
 
 //POST Method ,path
-  Goma.post("add",parameters, object : OnResponseListener {
+  Goma.post("http://192.168.8.101/api/v1/add",parameters, object : OnResponseListener {
     
           override fun onSuccess(response: String?) {
 
